@@ -1,0 +1,87 @@
+{
+  "pass_1_accuracy_pct": 10.0,
+  "pass_2_accuracy_pct": 30.0,
+  "sample_size": 20,
+  "pass_1_field_scores": {
+    "auth_methods": "9/20",
+    "self_serve": "10/20",
+    "api_surface": "11/20",
+    "buildability_verdict": "9/20"
+  },
+  "pass_1_field_percentages": {
+    "auth_methods_pct": 45.0,
+    "self_serve_pct": 50.0,
+    "api_surface_pct": 55.0,
+    "buildability_verdict_pct": 45.0
+  },
+  "pass_2_field_scores": {
+    "auth_methods": "9/20",
+    "self_serve": "20/20",
+    "api_surface": "8/20",
+    "buildability_verdict": "13/20"
+  },
+  "pass_2_field_percentages": {
+    "auth_methods_pct": 45.0,
+    "self_serve_pct": 100.0,
+    "api_surface_pct": 40.0,
+    "buildability_verdict_pct": 65.0
+  },
+  "before_after_examples": [
+    {
+      "app": "Notion",
+      "issue": "Pass 1 raw fetch returned HTTP 0 (0 bytes) due to SSL handshake timeout on developers.notion.com.",
+      "pass_1": {
+        "status_code": 0,
+        "bytes": 0,
+        "auth_methods": [
+          "OAuth2",
+          "API Key"
+        ],
+        "evidence_url": "https://developers.notion.com/guides/get-started/overview"
+      },
+      "pass_2": {
+        "status_code": 200,
+        "bytes": 387849,
+        "auth_methods": [
+          "OAuth2",
+          "API Key"
+        ],
+        "evidence_url": "https://developers.notion.com/guides/get-started/overview"
+      },
+      "resolution": "Fixed SSL unverified context and Chrome headers, fetching 387KB documentation text."
+    },
+    {
+      "app": "HubSpot",
+      "issue": "Pass 1 fetched marketing homepage (hubspot.com), scraping false sales copy gating.",
+      "pass_1": {
+        "auth_methods": [
+          "API Key"
+        ],
+        "evidence_url": "https://www.hubspot.com/"
+      },
+      "pass_2": {
+        "auth_methods": [
+          "OAuth2"
+        ],
+        "evidence_url": "https://developers.hubspot.com/docs/api-reference/latest/overview"
+      },
+      "resolution": "Resolved direct developer portal endpoint (developers.hubspot.com/docs/api/overview)."
+    },
+    {
+      "app": "Stripe",
+      "issue": "Pass 1 missing Composio SDK matched toolkit flag due to AttributeError on toolkit.meta.name.",
+      "pass_1": {
+        "existing_mcp": true
+      },
+      "pass_2": {
+        "existing_mcp": true
+      },
+      "resolution": "Fixed getattr(toolkit, 'name') in query_composio_sdk, matching Stripe 425 tools toolkit."
+    }
+  ],
+  "diagnosed_failure_modes": [
+    "Single-Page Application (SPA) React client-side rendering (Notion, Linear, Help Scout) hiding auth headers from raw HTML text scrapers.",
+    "Cloudflare WAF 403 Forbidden blocks on enterprise portals (Salesforce, PitchBook, Otter AI).",
+    "Root domain URL resolution landing on marketing homepages instead of developer API reference endpoints."
+  ]
+}

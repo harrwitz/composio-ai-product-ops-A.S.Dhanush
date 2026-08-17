@@ -1,0 +1,612 @@
+{
+  "sample_size": 20,
+  "overall_accuracy_pct": 10.0,
+  "exact_matches_count": 2,
+  "field_scores": {
+    "auth_methods": "9/20",
+    "self_serve": "10/20",
+    "api_surface": "11/20",
+    "buildability_verdict": "9/20"
+  },
+  "field_percentages": {
+    "auth_methods_pct": 45.0,
+    "self_serve_pct": 50.0,
+    "api_surface_pct": 55.0,
+    "buildability_verdict_pct": 45.0
+  },
+  "details": [
+    {
+      "app": "Salesforce",
+      "category": "CRM and Sales",
+      "extracted": {
+        "auth_methods": [
+          "API Key"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST+GraphQL",
+        "buildability_verdict": "buildable-today",
+        "confidence": "high",
+        "evidence_url": "https://www.salesforce.com/in/?ir=1&bc=OTH"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "OAuth2"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST+GraphQL",
+        "buildability_verdict": "buildable-today"
+      },
+      "field_matches": {
+        "auth_methods": false,
+        "self_serve": true,
+        "api_surface": true,
+        "buildability_verdict": true
+      },
+      "correct": false
+    },
+    {
+      "app": "HubSpot",
+      "category": "CRM and Sales",
+      "extracted": {
+        "auth_methods": [
+          "API Key"
+        ],
+        "self_serve": "gated",
+        "api_surface": "REST",
+        "buildability_verdict": "blocked",
+        "confidence": "medium",
+        "evidence_url": "https://www.hubspot.com/"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "OAuth2"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today"
+      },
+      "field_matches": {
+        "auth_methods": false,
+        "self_serve": false,
+        "api_surface": true,
+        "buildability_verdict": false
+      },
+      "correct": false
+    },
+    {
+      "app": "LiveAgent",
+      "category": "Support and Helpdesk",
+      "extracted": {
+        "auth_methods": [
+          "API Key"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today",
+        "confidence": "high",
+        "evidence_url": "https://www.liveagent.com/"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "API Key"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today"
+      },
+      "field_matches": {
+        "auth_methods": true,
+        "self_serve": true,
+        "api_surface": true,
+        "buildability_verdict": true
+      },
+      "correct": true
+    },
+    {
+      "app": "Help Scout",
+      "category": "Support and Helpdesk",
+      "extracted": {
+        "auth_methods": [
+          "Token"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today",
+        "confidence": "high",
+        "evidence_url": "https://www.helpscout.com/"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "OAuth2"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today"
+      },
+      "field_matches": {
+        "auth_methods": false,
+        "self_serve": true,
+        "api_surface": true,
+        "buildability_verdict": true
+      },
+      "correct": false
+    },
+    {
+      "app": "WhatsApp Business",
+      "category": "Communications and Messaging",
+      "extracted": {
+        "auth_methods": [
+          "Other"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "none-found",
+        "buildability_verdict": "blocked",
+        "confidence": "low",
+        "evidence_url": "https://developers.facebook.com/docs/whatsapp"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "OAuth2",
+          "Token"
+        ],
+        "self_serve": "partial",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-with-workaround"
+      },
+      "field_matches": {
+        "auth_methods": false,
+        "self_serve": false,
+        "api_surface": false,
+        "buildability_verdict": false
+      },
+      "correct": false
+    },
+    {
+      "app": "Zoho Cliq",
+      "category": "Communications and Messaging",
+      "extracted": {
+        "auth_methods": [
+          "API Key"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today",
+        "confidence": "high",
+        "evidence_url": "https://www.zoho.com/cliq/"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "OAuth2"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today"
+      },
+      "field_matches": {
+        "auth_methods": false,
+        "self_serve": true,
+        "api_surface": true,
+        "buildability_verdict": true
+      },
+      "correct": false
+    },
+    {
+      "app": "Meta Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "extracted": {
+        "auth_methods": [
+          "Other"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "none-found",
+        "buildability_verdict": "blocked",
+        "confidence": "low",
+        "evidence_url": "https://developers.facebook.com/docs/marketing-apis"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "OAuth2",
+          "Token"
+        ],
+        "self_serve": "partial",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-with-workaround"
+      },
+      "field_matches": {
+        "auth_methods": false,
+        "self_serve": false,
+        "api_surface": false,
+        "buildability_verdict": false
+      },
+      "correct": false
+    },
+    {
+      "app": "GoHighLevel",
+      "category": "Marketing, Ads, Email and Social",
+      "extracted": {
+        "auth_methods": [
+          "Other"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "none-found",
+        "buildability_verdict": "blocked",
+        "confidence": "low",
+        "evidence_url": "https://highlevel.stoplight.io"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "OAuth2"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today"
+      },
+      "field_matches": {
+        "auth_methods": false,
+        "self_serve": true,
+        "api_surface": false,
+        "buildability_verdict": false
+      },
+      "correct": false
+    },
+    {
+      "app": "Salesforce Commerce Cloud",
+      "category": "Ecommerce",
+      "extracted": {
+        "auth_methods": [
+          "Other"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "none-found",
+        "buildability_verdict": "blocked",
+        "confidence": "low",
+        "evidence_url": "https://developer.salesforce.com/docs/commerce"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "OAuth2"
+        ],
+        "self_serve": "gated",
+        "api_surface": "REST",
+        "buildability_verdict": "blocked"
+      },
+      "field_matches": {
+        "auth_methods": false,
+        "self_serve": false,
+        "api_surface": false,
+        "buildability_verdict": true
+      },
+      "correct": false
+    },
+    {
+      "app": "Gumroad",
+      "category": "Ecommerce",
+      "extracted": {
+        "auth_methods": [
+          "Other"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "none-found",
+        "buildability_verdict": "blocked",
+        "confidence": "low",
+        "evidence_url": "https://gumroad.com/api"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "OAuth2",
+          "API Key"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today"
+      },
+      "field_matches": {
+        "auth_methods": false,
+        "self_serve": true,
+        "api_surface": false,
+        "buildability_verdict": false
+      },
+      "correct": false
+    },
+    {
+      "app": "Bright Data",
+      "category": "Data, SEO and Scraping",
+      "extracted": {
+        "auth_methods": [
+          "API Key"
+        ],
+        "self_serve": "partial",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-with-workaround",
+        "confidence": "high",
+        "evidence_url": "https://brightdata.com"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "API Key",
+          "Token"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today"
+      },
+      "field_matches": {
+        "auth_methods": true,
+        "self_serve": false,
+        "api_surface": true,
+        "buildability_verdict": false
+      },
+      "correct": false
+    },
+    {
+      "app": "Waterfall.io",
+      "category": "Data, SEO and Scraping",
+      "extracted": {
+        "auth_methods": [
+          "API Key"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today",
+        "confidence": "high",
+        "evidence_url": "https://www.waterfall.io/"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "API Key"
+        ],
+        "self_serve": "gated",
+        "api_surface": "REST",
+        "buildability_verdict": "blocked"
+      },
+      "field_matches": {
+        "auth_methods": true,
+        "self_serve": false,
+        "api_surface": true,
+        "buildability_verdict": false
+      },
+      "correct": false
+    },
+    {
+      "app": "Neo4j",
+      "category": "Developer, Infra and Data platforms",
+      "extracted": {
+        "auth_methods": [
+          "Other"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "none-found",
+        "buildability_verdict": "blocked",
+        "confidence": "low",
+        "evidence_url": "https://neo4j.com/docs/api"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "Basic",
+          "API Key"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today"
+      },
+      "field_matches": {
+        "auth_methods": false,
+        "self_serve": true,
+        "api_surface": false,
+        "buildability_verdict": false
+      },
+      "correct": false
+    },
+    {
+      "app": "Netlify",
+      "category": "Developer, Infra and Data platforms",
+      "extracted": {
+        "auth_methods": [
+          "OAuth2",
+          "Token"
+        ],
+        "self_serve": "partial",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-with-workaround",
+        "confidence": "high",
+        "evidence_url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "OAuth2",
+          "Token"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today"
+      },
+      "field_matches": {
+        "auth_methods": true,
+        "self_serve": false,
+        "api_surface": true,
+        "buildability_verdict": false
+      },
+      "correct": false
+    },
+    {
+      "app": "Airtable",
+      "category": "Productivity and Project Management",
+      "extracted": {
+        "auth_methods": [
+          "OAuth2"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today",
+        "confidence": "high",
+        "evidence_url": "https://airtable.com/developers/agents"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "OAuth2",
+          "Token"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today"
+      },
+      "field_matches": {
+        "auth_methods": true,
+        "self_serve": true,
+        "api_surface": true,
+        "buildability_verdict": true
+      },
+      "correct": true
+    },
+    {
+      "app": "Notion",
+      "category": "Productivity and Project Management",
+      "extracted": {
+        "auth_methods": [
+          "OAuth2",
+          "API Key"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST+GraphQL",
+        "buildability_verdict": "buildable-today",
+        "confidence": "high",
+        "evidence_url": "https://developers.notion.com/guides/get-started/overview"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "OAuth2",
+          "Token"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today"
+      },
+      "field_matches": {
+        "auth_methods": true,
+        "self_serve": true,
+        "api_surface": false,
+        "buildability_verdict": true
+      },
+      "correct": false
+    },
+    {
+      "app": "Stripe",
+      "category": "Finance and Fintech",
+      "extracted": {
+        "auth_methods": [
+          "API Key",
+          "Basic"
+        ],
+        "self_serve": "partial",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-with-workaround",
+        "confidence": "high",
+        "evidence_url": "https://docs.stripe.com/api"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "OAuth2",
+          "API Key"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today"
+      },
+      "field_matches": {
+        "auth_methods": true,
+        "self_serve": false,
+        "api_surface": true,
+        "buildability_verdict": false
+      },
+      "correct": false
+    },
+    {
+      "app": "PitchBook",
+      "category": "Finance and Fintech",
+      "extracted": {
+        "auth_methods": [
+          "Other"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "none-found",
+        "buildability_verdict": "blocked",
+        "confidence": "low",
+        "evidence_url": "https://pitchbook.com"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "API Key"
+        ],
+        "self_serve": "gated",
+        "api_surface": "REST",
+        "buildability_verdict": "blocked"
+      },
+      "field_matches": {
+        "auth_methods": false,
+        "self_serve": false,
+        "api_surface": false,
+        "buildability_verdict": true
+      },
+      "correct": false
+    },
+    {
+      "app": "QuickBooks",
+      "category": "Finance and Fintech",
+      "extracted": {
+        "auth_methods": [
+          "OAuth2",
+          "API Key"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "none-found",
+        "buildability_verdict": "blocked",
+        "confidence": "low",
+        "evidence_url": "https://developer.intuit.com/app/developer/homepage"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "OAuth2"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "REST",
+        "buildability_verdict": "buildable-today"
+      },
+      "field_matches": {
+        "auth_methods": true,
+        "self_serve": true,
+        "api_surface": false,
+        "buildability_verdict": false
+      },
+      "correct": false
+    },
+    {
+      "app": "Consensus",
+      "category": "AI, Research and Media-native",
+      "extracted": {
+        "auth_methods": [
+          "Other"
+        ],
+        "self_serve": "self-serve",
+        "api_surface": "none-found",
+        "buildability_verdict": "blocked",
+        "confidence": "low",
+        "evidence_url": "https://consensus.app"
+      },
+      "ground_truth": {
+        "auth_methods": [
+          "Other"
+        ],
+        "self_serve": "gated",
+        "api_surface": "none-found",
+        "buildability_verdict": "blocked"
+      },
+      "field_matches": {
+        "auth_methods": true,
+        "self_serve": false,
+        "api_surface": true,
+        "buildability_verdict": true
+      },
+      "correct": false
+    }
+  ]
+}

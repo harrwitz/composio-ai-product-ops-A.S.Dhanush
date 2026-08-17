@@ -1,0 +1,166 @@
+[
+  {
+    "app": "Salesforce",
+    "url": "https://developer.salesforce.com/docs",
+    "error": "HTTP Error 403: Forbidden",
+    "duration_sec": 0.115,
+    "result": "FAIL (Fetch Error)"
+  },
+  {
+    "app": "HubSpot",
+    "url": "https://developers.hubspot.com/docs/api/overview",
+    "final_url": "https://developers.hubspot.com/docs/api-reference/latest/overview",
+    "status": 200,
+    "bytes": 1344430,
+    "duration_sec": 10.155,
+    "found_auth_terms": [
+      "oauth",
+      "token"
+    ],
+    "found_api_terms": [
+      "rest",
+      "graphql",
+      "endpoint",
+      "json"
+    ],
+    "result": "PASS"
+  },
+  {
+    "app": "Zendesk",
+    "url": "https://developer.zendesk.com/api-reference",
+    "final_url": "https://developer.zendesk.com/api-reference/",
+    "status": 200,
+    "bytes": 87282,
+    "duration_sec": 2.063,
+    "found_auth_terms": [
+      "basic"
+    ],
+    "found_api_terms": [
+      "endpoint"
+    ],
+    "result": "PASS"
+  },
+  {
+    "app": "Slack",
+    "url": "https://api.slack.com",
+    "final_url": "https://docs.slack.dev/",
+    "status": 200,
+    "bytes": 43355,
+    "duration_sec": 1.493,
+    "found_auth_terms": [
+      "basic"
+    ],
+    "found_api_terms": [],
+    "result": "PASS"
+  },
+  {
+    "app": "Shopify",
+    "url": "https://shopify.dev/docs/api",
+    "final_url": "https://shopify.dev/docs/api",
+    "status": 200,
+    "bytes": 390584,
+    "duration_sec": 0.089,
+    "found_auth_terms": [
+      "token"
+    ],
+    "found_api_terms": [
+      "rest",
+      "graphql",
+      "endpoint",
+      "json"
+    ],
+    "result": "PASS"
+  },
+  {
+    "app": "Firecrawl",
+    "url": "https://docs.firecrawl.dev",
+    "final_url": "https://docs.firecrawl.dev/introduction",
+    "status": 200,
+    "bytes": 744327,
+    "duration_sec": 0.252,
+    "found_auth_terms": [
+      "oauth",
+      "api key",
+      "bearer",
+      "token"
+    ],
+    "found_api_terms": [
+      "rest",
+      "graphql",
+      "endpoint",
+      "json"
+    ],
+    "result": "PASS"
+  },
+  {
+    "app": "Supabase",
+    "url": "https://supabase.com/docs",
+    "final_url": "https://supabase.com/docs",
+    "status": 200,
+    "bytes": 266783,
+    "duration_sec": 0.435,
+    "found_auth_terms": [
+      "oauth",
+      "token"
+    ],
+    "found_api_terms": [
+      "rest",
+      "graphql",
+      "json"
+    ],
+    "result": "PASS"
+  },
+  {
+    "app": "Linear",
+    "url": "https://developers.linear.app",
+    "final_url": "https://linear.app/developers",
+    "status": 200,
+    "bytes": 440674,
+    "duration_sec": 0.972,
+    "found_auth_terms": [
+      "oauth",
+      "api key",
+      "token"
+    ],
+    "found_api_terms": [
+      "rest",
+      "graphql"
+    ],
+    "result": "PASS"
+  },
+  {
+    "app": "Stripe",
+    "url": "https://stripe.com/docs/api",
+    "final_url": "https://docs.stripe.com/api",
+    "status": 200,
+    "bytes": 1229914,
+    "duration_sec": 2.258,
+    "found_auth_terms": [
+      "api key",
+      "bearer",
+      "token",
+      "basic"
+    ],
+    "found_api_terms": [
+      "rest",
+      "endpoint",
+      "json"
+    ],
+    "result": "PASS"
+  },
+  {
+    "app": "Consensus",
+    "url": "https://consensus.app",
+    "final_url": "https://consensus.app",
+    "status": 200,
+    "bytes": 27821,
+    "duration_sec": 0.92,
+    "found_auth_terms": [
+      "token"
+    ],
+    "found_api_terms": [
+      "json"
+    ],
+    "result": "PASS"
+  }
+]

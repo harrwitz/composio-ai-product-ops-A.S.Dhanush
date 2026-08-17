@@ -1,0 +1,12 @@
+# Environment & Secrets
+.env
+*.env
+
+# Cache & Scratch files
+__pycache__/
+*.pyc
+scratch/
+
+# OS metadata
+.DS_Store
+Thumbs.db
