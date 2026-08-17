@@ -3,7 +3,7 @@
 This repository contains an autonomous research agent, live network fetch logger, verification loop engine, pattern analysis module, and single-page HTML case study built for Composio's AI Product Ops workflow. It evaluates 100 target SaaS apps across 10 categories for agent toolkit buildability, authentication methods, self-serve accessibility, and Composio toolkit availability.
 
 * **GitHub Repository**: [https://github.com/harrwitz/composio-ai-product-ops-A.S.Dhanush](https://github.com/harrwitz/composio-ai-product-ops-A.S.Dhanush)
-* **Demo**: [[https://github.com/harrwitz/composio-ai-product-ops-A.S.Dhanush](https://harrwitz.github.io/composio-ai-product-ops-A.S.Dhanush/)]
+* **Demo**: [https://github.com/harrwitz/composio-ai-product-ops-A.S.Dhanush](https://harrwitz.github.io/composio-ai-product-ops-A.S.Dhanush/)
 ---
 
 ## 💡 Executive Summary for AI Product Ops
