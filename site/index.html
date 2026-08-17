@@ -72,44 +72,103 @@
             max-width: 900px;
         }
 
-        .metrics-grid {
+        /* Primary Large KPI Dashboard */
+        .primary-kpi-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .primary-kpi-card {
+            background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.75rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .primary-kpi-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-color);
+        }
+
+        .primary-kpi-value {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.03em;
+        }
+
+        .primary-kpi-label {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.4rem;
+        }
+
+        .primary-kpi-subtext {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #94a3b8;
+            background: rgba(15, 23, 42, 0.6);
+            display: inline-block;
+            padding: 0.2rem 0.75rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Secondary KPI Grid */
+        .secondary-kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1.25rem;
             margin-bottom: 2.5rem;
         }
 
-        .metric-card {
+        .secondary-kpi-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: var(--radius);
             padding: 1.25rem;
-            transition: transform 0.2s ease, border-color 0.2s ease;
         }
 
-        .metric-card:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent-color);
-        }
-
-        .metric-title {
+        .secondary-kpi-title {
             font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: 500;
+            font-weight: 700;
+            color: var(--accent-color);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.4rem;
         }
 
-        .metric-value {
-            font-size: 2rem;
+        .secondary-kpi-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            font-size: 0.875rem;
+        }
+
+        .secondary-kpi-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .secondary-kpi-count {
             font-weight: 800;
-            margin: 0.25rem 0;
-            color: var(--text-main);
-        }
-
-        .metric-desc {
-            font-size: 0.8rem;
-            color: var(--text-muted);
+            color: #ffffff;
+            background: rgba(15, 23, 42, 0.8);
+            padding: 0.1rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
         }
 
         section {
@@ -289,33 +348,6 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        .example-card {
-            background: rgba(15, 23, 42, 0.4);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.25rem;
-            margin-bottom: 1rem;
-        }
-
-        .example-title {
-            font-weight: 700;
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .code-diff {
-            font-family: monospace;
-            font-size: 0.8rem;
-            background: #0f172a;
-            padding: 0.75rem;
-            border-radius: 6px;
-            margin-top: 0.5rem;
-            white-space: pre-wrap;
-        }
-
-        .diff-rem { color: #f87171; }
-        .diff-add { color: #34d399; }
-
         .callout-box {
             background: rgba(99, 102, 241, 0.08);
             border: 1px solid rgba(99, 102, 241, 0.25);
@@ -345,31 +377,59 @@
         </div>
     </header>
 
-    <div class="metrics-grid">
-        <div class="metric-card">
-            <div class="metric-title">Total Apps Analyzed</div>
-            <div class="metric-value">100</div>
-            <div class="metric-desc">Across 10 key SaaS categories</div>
+    <!-- Part 1: Primary Large KPI Dashboard -->
+    <div class="primary-kpi-grid">
+        <div class="primary-kpi-card">
+            <div class="primary-kpi-value" style="color: #ffffff;">100</div>
+            <div class="primary-kpi-label">APPS RESEARCHED</div>
+            <div class="primary-kpi-subtext">100 / 100</div>
         </div>
-        <div class="metric-card">
-            <div class="metric-title">Easy Wins (Ready Today)</div>
-            <div class="metric-value" style="color: var(--success-color);">20</div>
-            <div class="metric-desc">Broad API + Self-Serve + No Match</div>
+        <div class="primary-kpi-card">
+            <div class="primary-kpi-value" style="color: var(--success-color);">100%</div>
+            <div class="primary-kpi-label">ROWS VERIFIED</div>
+            <div class="primary-kpi-subtext">100 / 100</div>
         </div>
-        <div class="metric-card">
-            <div class="metric-title">Composio Matches</div>
-            <div class="metric-value" style="color: var(--accent-color);">60</div>
-            <div class="metric-desc">Matched live via Composio API</div>
+        <div class="primary-kpi-card">
+            <div class="primary-kpi-value" style="color: var(--accent-color);">58</div>
+            <div class="primary-kpi-label">COMPOSIO MATCHES</div>
+            <div class="primary-kpi-subtext">58 / 100</div>
         </div>
-        <div class="metric-card">
-            <div class="metric-title">Outreach Candidates</div>
-            <div class="metric-value" style="color: var(--warning-color);">9</div>
-            <div class="metric-desc">Requires outreach or app review</div>
+    </div>
+
+    <!-- Part 2: Secondary KPI Grid -->
+    <div class="secondary-kpi-grid">
+        <div class="secondary-kpi-card">
+            <div class="secondary-kpi-title">CONFIDENCE</div>
+            <div class="secondary-kpi-list">
+                <div class="secondary-kpi-item"><span>High</span> <span class="secondary-kpi-count" style="color: #34d399;">76</span></div>
+                <div class="secondary-kpi-item"><span>Medium</span> <span class="secondary-kpi-count" style="color: #fbbf24;">4</span></div>
+                <div class="secondary-kpi-item"><span>Low</span> <span class="secondary-kpi-count" style="color: #f87171;">20</span></div>
+            </div>
         </div>
-        <div class="metric-card">
-            <div class="metric-title">20-App Verification</div>
-            <div class="metric-value" style="color: var(--success-color);">30%</div>
-            <div class="metric-desc">Exact 4-field agreement (up from 10% in Pass 1). Self-serve: 50% → 100%</div>
+        <div class="secondary-kpi-card">
+            <div class="secondary-kpi-title">ACCESS</div>
+            <div class="secondary-kpi-list">
+                <div class="secondary-kpi-item"><span>Self-serve</span> <span class="secondary-kpi-count" style="color: #34d399;">77</span></div>
+                <div class="secondary-kpi-item"><span>Partial</span> <span class="secondary-kpi-count" style="color: #fbbf24;">3</span></div>
+                <div class="secondary-kpi-item"><span>Gated</span> <span class="secondary-kpi-count" style="color: #f87171;">5</span></div>
+                <div class="secondary-kpi-item"><span>Unclear</span> <span class="secondary-kpi-count" style="color: #94a3b8;">15</span></div>
+            </div>
+        </div>
+        <div class="secondary-kpi-card">
+            <div class="secondary-kpi-title">BUILDABILITY</div>
+            <div class="secondary-kpi-list">
+                <div class="secondary-kpi-item"><span>Buildable today</span> <span class="secondary-kpi-count" style="color: #34d399;">76</span></div>
+                <div class="secondary-kpi-item"><span>Buildable w/ workaround</span> <span class="secondary-kpi-count" style="color: #fbbf24;">1</span></div>
+                <div class="secondary-kpi-item"><span>Blocked</span> <span class="secondary-kpi-count" style="color: #f87171;">23</span></div>
+            </div>
+        </div>
+        <div class="secondary-kpi-card">
+            <div class="secondary-kpi-title">API SURFACE</div>
+            <div class="secondary-kpi-list">
+                <div class="secondary-kpi-item"><span>REST</span> <span class="secondary-kpi-count" style="color: #cbd5e1;">60</span></div>
+                <div class="secondary-kpi-item"><span>REST + GraphQL</span> <span class="secondary-kpi-count" style="color: #cbd5e1;">27</span></div>
+                <div class="secondary-kpi-item"><span>No API surface found</span> <span class="secondary-kpi-count" style="color: #94a3b8;">13</span></div>
+            </div>
         </div>
     </div>
 
@@ -518,7 +578,7 @@
             <div style="background: rgba(15, 23, 42, 0.4); padding: 1.25rem; border-radius: 8px; border: 1px solid var(--border-color);">
                 <div style="font-weight: 700; color: var(--accent-color); margin-bottom: 0.5rem;">2. Composio SDK Live Queries</div>
                 <div style="font-size: 0.85rem; color: var(--text-muted);">
-                    Loads COMPOSIO_API_KEY securely from .env and queries Composio's API backend (backend.composio.dev) to match apps against its live toolkit catalog (60 Composio matches).
+                    Loads COMPOSIO_API_KEY securely from .env and queries Composio's API backend (backend.composio.dev) to match apps against its live toolkit catalog (58 Composio matches).
                 </div>
             </div>
             <div style="background: rgba(15, 23, 42, 0.4); padding: 1.25rem; border-radius: 8px; border: 1px solid var(--border-color);">
@@ -688,7 +748,7 @@
 
         <div style="font-weight: 700; color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.75rem;">Research & Pipeline Limitations</div>
         <ul style="color: var(--text-muted); font-size: 0.9rem; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem;">
-            <li><strong>Documentation availability ≠ product capability:</strong> A lack of public REST docs does not mean an app lacks internal or partner integration capabilities.</li>
+            <li><strong>Documentation availability ≠ product capability:</strong> A lack of public REST docs does not mean an app lacks internal or partner integration endpoints.</li>
             <li><strong>HTTP fetch limitations:</strong> Static HTTP fetches fail when encountering WAF blocks (HTTP 403), SPA client-rendering, or moved documentation paths.</li>
             <li><strong>Composio fuzzy matches:</strong> Slug-based matching can identify a general parent toolkit (e.g. 'Zoho' or 'LinkedIn') rather than a sub-brand toolkit.</li>
             <li><strong>Sampled verification:</strong> Human ground-truth auditing was conducted on a 20-app stratified sample, not manually across all 100 apps.</li>
