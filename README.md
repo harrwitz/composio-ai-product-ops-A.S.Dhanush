@@ -9,7 +9,7 @@ This repository contains an autonomous research agent, live network fetch logger
 ## 💡 Executive Summary for AI Product Ops
 
 * **What Was Built**: An autonomous Python research pipeline leveraging `urllib`, `BeautifulSoup`, and the official `composio` SDK to automatically crawl developer documentation, extract authentication models, classify API surfaces, and match live Composio toolkits across 100 SaaS apps.
-* **What Was Found**: **60 Composio matches** identified, **20 Easy Win** apps with broad public REST/GraphQL APIs and zero existing Composio match ready for instant toolkit generation, and **9 Outreach candidates** requiring partner app reviews.
+* **What Was Found**: **58 Composio matches** identified, **21 Easy Win** apps with broad public REST/GraphQL APIs and zero existing Composio match ready for instant toolkit generation, and **8 Outreach candidates** requiring partner app reviews.
 * **How It Was Verified**: Evaluated via a 20-app stratified human audit sample across all 10 categories. Pass 2 improved 4-field exact agreement from 10% to 30%, and self-serve classification accuracy from 50% to 100%.
 * **Where It Failed**: Documented empirical edge-case failures including Cloudflare WAF blocks (HTTP 403 on PitchBook, Otter AI, Consensus), Graph API token requirements (HTTP 400 on Meta Ads, WhatsApp Business), and SPA React client shells (Binance).
 * **How to Reproduce**: Live research pipeline executable via `python agents/research_agent.py`; interactive case study viewable via `site/index.html`.
@@ -50,7 +50,7 @@ Meta(
 ```
 
 ### 📌 Composio Terminology & Match Clarification
-* **60 Composio Matches Identified**: 60 apps in the research set matched active toolkits via the Composio API.
+* **58 Composio Matches Identified**: 58 apps in the research set matched active toolkits via the Composio API.
 * **General / Parent-Brand Toolkit Disclosure**: A Composio match does not necessarily mean the target app has a dedicated native MCP server. Slug-based matching can identify a parent or general brand toolkit (e.g., general 'Zoho' toolkit matched for Zoho Cliq, or general 'LinkedIn' toolkit matched for LinkedIn Ads). All fuzzy/general matches are explicitly disclosed in `verification_notes`.
 
 ---
@@ -62,13 +62,13 @@ Below is the authoritative summary of the frozen dataset ([`data/apps_final.json
 | Metric Category | Metric Value | Description / Breakdown |
 | :--- | :---: | :--- |
 | **Total Apps Analyzed** | **100** | Exactly 100 unique SaaS apps across 10 categories |
-| **Composio Matches** | **60** | Active Composio toolkits/matches identified live |
-| **Easy Wins** | **20** | Broad API + Self-Serve + Zero Composio match |
-| **Outreach Candidates** | **9** | Gated or requires partner app review |
+| **Composio Matches** | **58** | Active Composio toolkits/matches identified live |
+| **Easy Wins** | **21** | Broad API + Self-Serve + Zero Composio match |
+| **Outreach Candidates** | **8** | Gated or requires partner app review |
 | **Buildability Verdict** | **75 / 1 / 24** | `buildable-today`: 75 \| `buildable-with-workaround`: 1 \| `blocked`: 24 |
-| **Self-Serve Access** | **75 / 6 / 16 / 3** | `self-serve`: 75 \| `gated`: 6 \| `unclear`: 16 \| `partial`: 3 |
+| **Self-Serve Access** | **76 / 5 / 16 / 3** | `self-serve`: 76 \| `gated`: 5 \| `unclear`: 16 \| `partial`: 3 |
 | **Confidence Distribution** | **75 / 4 / 21** | `high`: 75 \| `medium`: 4 \| `low`: 21 |
-| **API Surface Classification** | **57 / 27 / 16** | `REST`: 57 \| `REST+GraphQL`: 27 \| `none-found`: 16 |
+| **API Surface Classification** | **58 / 27 / 15** | `REST`: 58 \| `REST+GraphQL`: 27 \| `none-found`: 15 |
 
 ---
 
