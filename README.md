@@ -235,4 +235,4 @@ Open [`site/index.html`](file:///c:/Users/user/Documents/cosmo%20intern/site/ind
 ## 🔗 Submission Links
 
 * **GitHub Repository**: [https://github.com/harrwitz/composio-ai-product-ops-A.S.Dhanush](https://github.com/harrwitz/composio-ai-product-ops-A.S.Dhanush)
-* **Live Case Study**: Pending deployment
+* **Live Case Study**: [https://harrwitz.github.io/composio-ai-product-ops-A.S.Dhanush/](https://harrwitz.github.io/composio-ai-product-ops-A.S.Dhanush/)
